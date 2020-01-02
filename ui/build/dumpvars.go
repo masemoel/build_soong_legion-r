@@ -138,7 +138,7 @@ func dumpMakeVars(ctx Context, config Config, goals, vars []string, write_soong_
 var BannerVars = []string{
 	"PLATFORM_VERSION_CODENAME",
 	"PLATFORM_VERSION",
-	"LEGION_BUILD_VERSION",
+	"LEGION_VERSION",
 	"TARGET_PRODUCT",
 	"TARGET_BUILD_VARIANT",
 	"TARGET_BUILD_TYPE",
@@ -173,7 +173,7 @@ func Banner(make_vars map[string]string) string {
 	fmt.Fprintln(b, "*       Welcome to LEGIONOS-Q Building Envoirnment:)        *")
 	fmt.Fprintln(b, "*       --------------------------------------------        *")
 	fmt.Fprintln(b, "***********************************************************************")
-	fmt.Fprintf(b, "%s=%s\n", "LEGION_BUILD_VERSION", make_vars["LEGION_BUILD_VERSION"])
+	fmt.Fprintf(b, "%s=%s\n", "LEGION_VERSION", make_vars["LEGION_VERSION"])
 	fmt.Fprintf(b, "%s=%s\n", "PLATFORM_VERSION_CODENAME", make_vars["PLATFORM_VERSION_CODENAME"])
 	fmt.Fprintf(b, "%s=%s\n", "PLATFORM_VERSION", make_vars["PLATFORM_VERSION"])
 	fmt.Fprintf(b, "%s=%s\n", "TARGET_PRODUCT", make_vars["TARGET_PRODUCT"])
@@ -195,6 +195,7 @@ func Banner(make_vars map[string]string) string {
 	fmt.Fprintf(b, "%s=%s\n", "HOST_CROSS_OS", make_vars["HOST_CROSS_OS"])
 	fmt.Fprintf(b, "%s=%s\n", "HOST_CROSS_ARCH", make_vars["HOST_CROSS_ARCH"])
 	fmt.Fprintf(b, "%s=%s\n", "HOST_CROSS_2ND_ARCH", make_vars["HOST_CROSS_2ND_ARCH"])
+	fmt.Fprintf(b, "%s=%s\n", "PRODUCT_SOONG_NAMESPACES", make_vars["PRODUCT_SOONG_NAMESPACES"])
 	fmt.Fprintln(b, "=========================================================================")
 
 	return b.String()
