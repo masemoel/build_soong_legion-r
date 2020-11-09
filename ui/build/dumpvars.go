@@ -172,7 +172,7 @@ func Banner(make_vars map[string]string) string {
 	b := &bytes.Buffer{}
 
 	fmt.Fprintln(b, "***********************************************************************")
-	fmt.Fprintln(b, "*       Welcome to LEGIONOS-R Building Envoirnment:)        *")
+	fmt.Fprintln(b, "*       Welcome to LEGIONOS-R Building Environment:)        *")
 	fmt.Fprintln(b, "*       --------------------------------------------        *")
 	fmt.Fprintln(b, "***********************************************************************")
 	fmt.Fprintf(b, "%s=%s\n", "LEGION_VERSION", make_vars["LEGION_VERSION"])
